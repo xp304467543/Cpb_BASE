@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="号码"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_12" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="期数"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/topLayout"
+        android:background="@color/color_EEEEEE" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_1" />
+
+    <TextView
+        android:id="@+id/holder_Long"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/grey_88"
+        android:visibility="gone"
+        android:text="暂无长龙数据~"/>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/longLoad"
+        style="@style/SpinKitView.Circle"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_centerInParent="true"
+        app:SpinKit_Color="@color/grey_e6" />
+</RelativeLayout>

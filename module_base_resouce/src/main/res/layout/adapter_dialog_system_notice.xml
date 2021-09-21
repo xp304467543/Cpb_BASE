@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemLayout"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="@dimen/dp_100"
+    android:layout_height="@dimen/dp_40">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoticeType"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_marginEnd="10dp"
+        android:textSize="@dimen/sp_12" />
+
+    <!--    <com.lib.basiclib.base.round.RoundTextView-->
+    <!--        android:id="@+id/tvNoticeRound"-->
+    <!--        android:layout_width="@dimen/dp_5"-->
+    <!--        android:layout_height="@dimen/dp_5"-->
+    <!--        android:layout_marginStart="@dimen/dp_10"-->
+    <!--        android:layout_marginTop="@dimen/dp_10"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:rv_backgroundColor="@color/alivc_blue_1"-->
+    <!--        app:rv_cornerRadius="@dimen/dp_20" />-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <View
+            android:id="@+id/centerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:elevation="@dimen/dp_13">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBack"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dp_18"
+                android:src="@mipmap/ic_arrow_back_black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/dp_8"
+                android:gravity="center"
+                android:text="余额"
+                android:textColor="@color/alivc_blue_2"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgTips"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:padding="@dimen/dp_16"
+                android:src="@mipmap/ic_mine_tips_red" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/grey_f5f7fa" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/refreshMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableEnd="@mipmap/ic_mine_refresh"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="@dimen/dp_10"
+                android:text="钱包金额"
+                android:textColor="@color/alivc_blue_3"
+                android:textSize="@dimen/sp_14" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRecycle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="@dimen/dp_20"
+                android:text="一键回收"
+                android:textColor="@color/alivc_blue_3"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_EEEEEE"
+            app:layout_constraintBottom_toTopOf="@+id/line_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_20">
+
+            <View
+                android:id="@+id/line_1"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/dp_45"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@color/color_EEEEEE"
+                app:layout_constraintBottom_toTopOf="@+id/line_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:id="@+id/line_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/dp_38"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_38"
+                android:background="@color/color_EEEEEE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_31"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="中心钱包"
+                android:textColor="@color/alivc_blue_3"
+                app:drawableStartCompat="@mipmap/ic_mine_center"
+                app:layout_constraintEnd_toStartOf="@+id/line_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCenterMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_13"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="@color/alivc_blue_1"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/line_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_31"
+                android:drawablePadding="@dimen/dp_5"
+                android:text="场馆钱包"
+                android:textColor="@color/alivc_blue_3"
+                app:drawableStartCompat="@mipmap/ic_mine_center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/line_1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOtherMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_13"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:text="0.00"
+                android:textColor="@color/alivc_blue_1"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/line_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_1" />
+
+
+            <include
+                android:id="@+id/layoutMore"
+                layout="@layout/layout_grild_game_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/line_2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                app:layout_constraintTop_toBottomOf="@+id/line_2">
+
+                <LinearLayout
+                    android:id="@+id/linGame"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toStartOf="@+id/tvShowMore"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="乐购棋牌"
+                        android:textColor="@color/alivc_blue_3"
+                        android:textSize="@dimen/sp_12" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="BG游戏"
+                        android:textColor="@color/alivc_blue_3"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:id="@+id/tv_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="AG游戏"
+                        android:textColor="@color/alivc_blue_3"
+                        android:textSize="@dimen/sp_12" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linMoney2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toStartOf="@+id/tvShowMore"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linGame">
+
+                    <TextView
+                        android:id="@+id/tv_qp_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/alivc_blue_6"
+                        android:textSize="@dimen/sp_12"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tv_bg_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/alivc_blue_6"
+                        android:textSize="@dimen/sp_12"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tv_ag_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/alivc_blue_6"
+                        android:textSize="@dimen/sp_12"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvShowMore"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="wrap_content"
+                    android:drawableBottom="@mipmap/ic_arrow_bottom"
+                    android:gravity="center"
+                    android:text="更多"
+                    android:textColor="@color/alivc_blue_6"
+                    android:textSize="@dimen/sp_11"
+                    app:layout_constraintBottom_toBottomOf="@+id/linMoney2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/linGame" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/sp_10"
+            android:paddingEnd="@dimen/sp_10">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自动转账"
+                android:textColor="@color/alivc_blue_3" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="（开启后，进入游戏时将自动额度转换）"
+                android:textColor="@color/alivc_blue_6"
+                android:textSize="@dimen/sp_10" />
+
+            <com.lib.basiclib.base.xui.widget.button.switchbutton.SwitchButton
+                android:id="@+id/moneySwitch"
+                android:layout_width="@dimen/dp_55"
+                android:layout_height="@dimen/dp_35"
+                android:checked="true"
+                android:paddingTop="@dimen/dp_2"
+                app:swb_animationDuration="300"
+                app:swb_backDrawable="@drawable/ios_back_drawable"
+                app:swb_thumbDrawable="@drawable/ios_thumb_selector"
+                app:swb_thumbMarginBottom="-8dp"
+                app:swb_thumbMarginLeft="-5dp"
+                app:swb_thumbMarginRight="-6dp"
+                app:swb_thumbMarginTop="-2.5dp"
+                app:swb_thumbRangeRatio="1.5"
+                tools:ignore="RelativeOverlap" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5"
+            android:background="@color/grey_f5f7fa" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingEnd="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tvB1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转出账户"
+                android:textColor="@color/alivc_blue_6"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvB2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转入账户"
+                android:textColor="#FF9A9A9A"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMoneyCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:drawablePadding="@dimen/dp_8"
+                android:text="中心钱包"
+                android:textColor="@color/alivc_blue_3"
+                app:drawableEndCompat="@mipmap/ic_mine_arraw_b"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvB1" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMoneyGame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:drawablePadding="@dimen/dp_8"
+                android:textColor="@color/alivc_blue_3"
+                app:drawableEndCompat="@mipmap/ic_mine_arraw_b"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvB1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgB1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_22"
+                android:src="@mipmap/ic_mine_arraw_r"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvB1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvB3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textColor="#FF9A9A9A"
+                android:textSize="9sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgB1"
+                tools:ignore="SmallSp" />
+
+            <View
+                android:id="@+id/lin1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="#FFF1F0F6"
+                app:layout_constraintTop_toBottomOf="@+id/tvB3" />
+
+
+            <TextView
+                android:id="@+id/tvb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="转账金额"
+                android:textColor="@color/alivc_blue_3"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lin1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvb5"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_15"
+                android:gravity="center"
+                android:text="￥"
+                android:textColor="@color/alivc_blue_3"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvb4" />
+
+            <EditText
+                android:id="@+id/etMoney"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@null"
+                android:hint="请输入转账金额"
+                android:inputType="numberDecimal"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_5"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_13"
+                app:layout_constraintEnd_toStartOf="@+id/tvAll"
+                app:layout_constraintStart_toEndOf="@+id/tvb5"
+                app:layout_constraintTop_toBottomOf="@+id/tvb4" />
+
+            <TextView
+                android:id="@+id/tvAll"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginTop="@dimen/dp_15"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@color/alivc_blue_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvb4" />
+
+
+            <View
+                android:id="@+id/lin2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_4"
+                android:background="#FFF1F0F6"
+                app:layout_constraintTop_toBottomOf="@+id/etMoney" />
+
+
+            <TextView
+                android:id="@+id/tvMoneyTips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="*转账金额不能大于转出账户余额"
+                android:textColor="@color/color_FF513E"
+                android:textSize="@dimen/sp_10"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lin2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btSure"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="@dimen/dp_14"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_14"
+                android:background="@drawable/button_blue_background"
+                android:gravity="center"
+                android:text="立即转账"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/lin2" />
+
+            <TextView
+                android:id="@+id/tvCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="如需帮助,请 联系客服"
+                android:textSize="@dimen/sp_11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btSure" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

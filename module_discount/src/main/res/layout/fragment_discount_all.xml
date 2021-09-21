@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/statusViewDisAll"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/titleDis"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textColor="@color/alivc_blue_6"
+        android:text="优惠活动"/>
+
+    <com.lib.basiclib.base.round.RoundLinearLayout
+        android:id="@+id/topSwitch"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_8"
+        android:orientation="horizontal"
+        app:rv_cornerRadius="@dimen/dp_5">
+
+        <com.lib.basiclib.base.round.RoundTextView
+            android:id="@+id/tv1"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="优惠活动"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:rv_backgroundColor="@color/alivc_blue_1"
+            app:rv_cornerRadius_BL="@dimen/dp_5"
+            app:rv_cornerRadius_TL="@dimen/dp_5"
+            app:rv_strokeColor="@color/alivc_blue_1"
+            app:rv_strokeWidth="@dimen/dp_1" />
+
+        <com.lib.basiclib.base.round.RoundTextView
+            android:id="@+id/tv2"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="任务中心"
+            android:textColor="@color/alivc_blue_1"
+            android:textSize="@dimen/sp_12"
+            app:rv_cornerRadius_BR="@dimen/dp_5"
+            app:rv_cornerRadius_TR="@dimen/dp_5"
+            app:rv_strokeColor="@color/alivc_blue_1"
+            app:rv_strokeWidth="@dimen/dp_1" />
+    </com.lib.basiclib.base.round.RoundLinearLayout>
+
+    <com.customer.component.NoScrollViewPager
+        android:id="@+id/vpDisAll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

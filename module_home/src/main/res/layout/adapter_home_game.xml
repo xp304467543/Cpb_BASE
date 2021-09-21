@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.customer.component.NestedScrollableHost xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gameContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</com.customer.component.NestedScrollableHost>

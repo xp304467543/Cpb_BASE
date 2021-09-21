@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/sp_10">
+
+    <com.lib.basiclib.base.xui.widget.imageview.RadiusImageView
+        android:id="@+id/imgSkin"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/dp_5" />
+
+
+    <com.lib.basiclib.base.round.RoundTextView
+        android:id="@+id/tvSkinName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toTopOf="@+id/tvSkinContentDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rv_backgroundColor="#6A86B9"
+        app:rv_cornerRadius="@dimen/dp_11"
+        tools:text="默认皮肤" />
+
+    <com.lib.basiclib.base.round.RoundTextView
+        android:id="@+id/tvSkinContentDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:alpha="0.2"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_3"
+        android:textColor="@color/ffffff"
+        android:textSize="@dimen/sp_10"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imgSkin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rv_backgroundColor="#6A86B9"
+        app:rv_cornerRadius="@dimen/dp_11"
+        tools:text="默认皮肤" />
+
+    <LinearLayout
+        android:id="@+id/linSelect"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UseCompoundDrawables">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/ic_skin_use"
+            android:contentDescription="@string/app_name" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

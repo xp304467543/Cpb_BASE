@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/mVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/text_black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/noAnchor"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/text_black"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/noAnchorBack"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/ic_arrow_back_white" />
+
+        <ImageView
+            android:id="@+id/ImgNoAnchor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_base_user" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ImgNoAnchor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_15"
+            android:text="主播暂时不在家~"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/liveTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/mVideoView">
+
+
+        <com.lib.basiclib.widget.tab.MagicIndicator
+            android:id="@+id/liveTab"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_weight="1"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/linAttention"
+            android:layout_width="@dimen/dp_75"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/background_gradient"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoContainer">
+
+            <ImageView
+                android:id="@+id/imgAttention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_add" />
+
+            <TextView
+                android:id="@+id/tvAttention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="center"
+                android:text="@string/home_attention"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/liveVp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveTabLayout" />
+
+
+    <!-- Svga动画 -->
+    <com.opensource.svgaplayer.SVGAImageView
+        android:id="@+id/svgaImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:fillMode="Backward"
+        app:autoPlay="true"
+        app:loopCount="1" />
+
+    <RelativeLayout
+        android:id="@+id/toast_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:background="@mipmap/ic_oast_prise"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_toast_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_44"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_70"
+            android:paddingTop="@dimen/dp_6"
+            android:paddingEnd="@dimen/dp_0"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- vip进场-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tvVipEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/dp_130"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/enterImg"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/ic_base_user" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/enterBak"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_15"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_enter_7" />
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEnterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_90"
+            android:textSize="@dimen/dp_10"
+            android:text="sadfaskjnsakjfndkjd"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dp_20"
+            app:layout_constraintStart_toEndOf="@+id/enterImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

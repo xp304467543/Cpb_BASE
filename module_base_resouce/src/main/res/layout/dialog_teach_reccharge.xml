@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lib.basiclib.base.round.RoundLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:rv_backgroundColor="@color/white"
+    app:rv_cornerRadius_TL="@dimen/dp_10"
+    app:rv_cornerRadius_TR="@dimen/dp_10">
+
+    <com.lib.basiclib.base.round.RoundRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_999999"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="选择存款教程"
+            android:textColor="@color/color_333333"
+            android:textStyle="bold" />
+
+    </com.lib.basiclib.base.round.RoundRelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#FFEEEEEE" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chargeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_1"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_8"-->
+<!--            android:src="@mipmap/ic_t_1" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="支付宝转卡"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_1"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#FFEEEEEE" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_2"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_8"-->
+<!--            android:src="@mipmap/ic_t_2" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="银行卡充值"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_2"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#FFEEEEEE" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_3"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_3"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_8"-->
+<!--            android:src="@mipmap/ic_t_3" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="微信转卡"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_3"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#FFEEEEEE" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_4"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_4"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_8"-->
+<!--            android:src="@mipmap/ic_t_1" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_4"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="支付宝转支付宝"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_4"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#FFEEEEEE" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_5"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:visibility="gone"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_5"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_10"-->
+<!--            android:src="@mipmap/ic_t_4" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_5"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="云闪付"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_5"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#FFEEEEEE" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_6"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_6"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_10"-->
+<!--            android:src="@mipmap/ic_t_4" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_6"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="银行网关"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_6"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#FFEEEEEE" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_7"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_7"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_8"-->
+<!--            android:src="@mipmap/ic_t_1" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_7"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="支付宝转h5"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_7"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#FFEEEEEE" />-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_8"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:visibility="gone"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_8"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_8"-->
+<!--            android:src="@mipmap/ic_t_5" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_8"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="卡密"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_8"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#FFEEEEEE" />-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_11"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_11"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_8"-->
+<!--            android:src="@mipmap/ic_t_6" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_11"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="虚拟币人工充值"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_11"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#FFEEEEEE" />-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_9"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_9"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_8"-->
+<!--            android:src="@mipmap/ic_t_6" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_9"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="虚拟币充值"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_9"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="#FFEEEEEE" />-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layout_10"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_40"-->
+<!--        android:background="@color/white">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/rImg_10"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="@dimen/dp_8"-->
+<!--            android:src="@mipmap/ic_ad_3" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/rName_10"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:paddingStart="@dimen/dp_10"-->
+<!--            android:text="USDT"-->
+<!--            android:textColor="@color/color_333333" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/selEnd_10"-->
+<!--            android:layout_width="@dimen/dp_50"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:text="√"-->
+<!--            android:textColor="@color/color_FF513E"-->
+<!--            android:textSize="25sp"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+
+</com.lib.basiclib.base.round.RoundLinearLayout>

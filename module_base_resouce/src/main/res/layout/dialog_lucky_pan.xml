@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPan"
+        android:layout_width="315dp"
+        android:layout_height="446dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/ic_pan_bg" />
+
+        <LinearLayout
+            android:id="@+id/linTopV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="@mipmap/ic_pan_tips"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="20dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/ic_round_lb" />
+
+            <com.customer.component.marquee.MarqueeTextView
+                android:id="@+id/tvNoticeMassages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="3dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                app:mtv_isAutoDisplay="true"
+                app:mtv_isAutoFit="true" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ryPan"
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linTopV">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgRoundPan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_round_bord" />
+
+            <com.customer.component.luckpan.NewLuckView
+                android:id="@+id/luckView"
+                android:layout_width="235dp"
+                android:layout_height="235dp"
+                android:layout_centerInParent="true"
+                app:luck_indicator_drawable="@mipmap/ic_launcher"
+                app:luck_indicator_height_ratio="0.27"
+                app:luck_indicator_width_ratio="0.25" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_quan" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btTime"
+            android:layout_width="160dp"
+            android:layout_height="@dimen/dp_38"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@mipmap/ic_pan_bt1"
+            android:gravity="center_horizontal"
+            android:paddingTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ryPan" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btBuyTime"
+            android:layout_width="210dp"
+            android:layout_height="@dimen/dp_34"
+            android:layout_marginTop="@dimen/dp_6"
+            android:background="@mipmap/ic_pan_bt2"
+            android:gravity="center"
+            android:text="购买抽奖次数"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btTime" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/panClose"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="@dimen/dp_13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPan"
+        app:srcCompat="@mipmap/ic_close_round" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lib.basiclib.base.round.RoundLinearLayout
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rv_backgroundColor="@color/white"
+        app:rv_cornerRadius="@dimen/dp_12">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/dp_30"
+                android:text="添加地址"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/dp_18"
+                android:src="@mipmap/ic_close" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:text="添加地址"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_12" />
+
+
+        <EditText
+            android:id="@+id/usdtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@null"
+            android:hint="请输入代币地址"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_12"
+            tools:ignore="Autofill,RtlSymmetry" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#FFEEEEEE"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:text="备注"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/sp_12" />
+
+
+        <EditText
+            android:id="@+id/usdtAddressHint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@null"
+            android:hint="请输入备注"
+            android:maxEms="5"
+            android:maxLines="1"
+            android:maxLength="5"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/color_333333" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#FFEEEEEE"/>
+
+
+
+        <com.lib.basiclib.base.round.RoundTextView
+            android:id="@+id/tvConfirmChange"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_marginTop="@dimen/dp_26"
+            android:layout_marginEnd="@dimen/dp_36"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="添加"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:rv_backgroundColor="@color/color_FF513E"
+            app:rv_cornerRadius="@dimen/dp_40" />
+
+
+    </com.lib.basiclib.base.round.RoundLinearLayout>
+
+</RelativeLayout>

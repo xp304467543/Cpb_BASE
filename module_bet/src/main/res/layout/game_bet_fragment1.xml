@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGameBetType"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dp_10" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#FFEDEDED" />
+
+        <com.customer.component.MyScrollView
+            android:id="@+id/myScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linContainerTop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRightTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:textColor="@color/color_333333"
+                    android:visibility="gone"
+                    android:textSize="@dimen/sp_12" />
+
+                <LinearLayout
+                    android:id="@+id/layoutLong"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_10"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_10"
+                        android:textColor="@color/color_666666"
+                        android:text="长龙连开期数:"/>
+                    <com.lib.basiclib.base.round.RoundTextView
+                        android:id="@+id/tvLongSel"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        app:rv_backgroundColor="#F4F3F4"
+                        app:rv_strokeWidth="0.5dp"
+                        android:paddingStart="@dimen/dp_8"
+                        android:paddingEnd="@dimen/dp_8"
+                        android:gravity="center"
+                        app:rv_cornerRadius="2dp"
+                        android:text="6"
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="@color/color_333333"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:drawableEnd="@mipmap/ic_arrow_d_b"
+                        app:rv_strokeColor="@color/color_EEEEEE"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutOdds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="赔率:  "
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sp_12" />
+
+                    <TextView
+                        android:id="@+id/tvHx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/color_FF513E"
+                        android:textSize="@dimen/sp_12" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout3D"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv3dRight"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_f5f7fa"
+                        android:gravity="center"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sp_12"
+                        tools:text="dfjhdsbjh" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_d8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv3dLeft"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_f5f7fa"
+                        android:gravity="center"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sp_12"
+                        tools:text="dfjhdsbjh" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout3D3z"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv3d3z1"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_f5f7fa"
+                        android:gravity="center"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sp_12"
+                        tools:text="dfjhdsbjh" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_d8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv3d3z2"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_f5f7fa"
+                        android:gravity="center"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sp_12"
+                        tools:text="dfjhdsbjh" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_d8" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv3d3z3"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="@color/grey_f5f7fa"
+                        android:gravity="center"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/sp_12"
+                        tools:text="dfjhdsbjh" />
+
+                </LinearLayout>
+
+                <com.customer.component.UnScrollListView
+                    android:id="@+id/rvGameBetContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </com.customer.component.MyScrollView>
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomGameBetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linBottom"
+        android:background="@color/white"
+        android:clickable="true"
+        android:elevation="0.5dp"
+        android:focusable="true"
+        android:visibility="gone"
+        tools:ignore="UnusedAttribute">
+
+        <RadioGroup
+            android:id="@+id/selectRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/rb_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="余额竞猜"
+                android:textSize="@dimen/sp_10"
+                android:theme="@style/MyRadioButton" />
+
+            <RadioButton
+                android:id="@+id/rb_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="钻石竞猜"
+                android:textSize="@dimen/sp_10"
+                android:theme="@style/MyRadioButton" />
+
+        </RadioGroup>
+
+        <HorizontalScrollView
+            android:id="@+id/radioHor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@+id/selectRadio">
+
+            <RadioGroup
+                android:id="@+id/radioGroupLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+        </HorizontalScrollView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioHor">
+
+            <TextView
+                android:id="@+id/tvF1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="其他金额"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_12" />
+
+            <com.lib.basiclib.base.round.RoundRelativeLayout
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="@dimen/dp_30"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_toEndOf="@+id/tvF1"
+                app:rv_backgroundColor="@color/grey_f5f7fa"
+                app:rv_cornerRadius="@dimen/dp_20">
+
+                <EditText
+                    android:id="@+id/etGameBetPlayMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxEms="8"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/dp_8"
+                    android:paddingEnd="@dimen/dp_2"
+                    android:text="1"
+                    android:textSize="@dimen/sp_12" />
+
+            </com.lib.basiclib.base.round.RoundRelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvGameBetCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_toStartOf="@+id/tvGameTotalMoney"
+                android:gravity="center"
+                android:text="共1注"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tvGameTotalMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:layout_toStartOf="@+id/tvEnd"
+                android:gravity="center"
+                android:text="20"
+                android:textColor="@color/color_FF513E"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/tvEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:gravity="center"
+                android:text="元"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_12" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@color/color_F5F7FA"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/imgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserDiamond"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_10"
+            android:drawableEnd="@mipmap/ic_mine_refresh"
+            android:drawablePadding="@dimen/dp_8"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_333333"
+            tools:text="666" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvReset"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/button_grey_background"
+            android:gravity="center"
+            android:textColor="@color/color_333333"
+            android:text="重置"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/tvBetSubmit"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:background="@drawable/button_blue_background"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_13" />
+    </LinearLayout>
+</RelativeLayout>

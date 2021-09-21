@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/appBarLayoutHome"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/names"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="优惠活动"
+            android:textColor="#FF445779"
+            android:textSize="@dimen/sp_18" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/userTask"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/alivc_blue_2"
+            android:layout_alignParentEnd="true"
+            android:text="新手任务"/>
+
+
+    </RelativeLayout>
+
+    <com.lib.basiclib.widget.tab.MagicIndicator
+        android:id="@+id/discountSwitchVideoTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_38"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayoutHome"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpDiscount"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_F5F7FA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discountSwitchVideoTab" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@mipmap/ic_mine_refresh"
+        android:drawablePadding="@dimen/dp_20"
+        android:gravity="center"
+        android:padding="@dimen/dp_20"
+        android:text="重新获取"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

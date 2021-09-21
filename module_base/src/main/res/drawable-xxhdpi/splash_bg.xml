@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item>
+        <bitmap android:src="@mipmap/bg1" />
+    </item>
+    <item
+        android:width="328dp"
+        android:height="240dp"
+        android:gravity="center_horizontal"
+        android:top="110dp"
+        tools:ignore="UnusedAttribute">
+        <bitmap android:src="@mipmap/bg2" />
+    </item>
+
+    <item
+        android:width="78dp"
+        android:height="78dp"
+        android:gravity="center_horizontal"
+        android:top="540dp"
+        tools:ignore="UnusedAttribute">
+        <bitmap android:src="@mipmap/bg3" />
+    </item>
+
+    <item
+        android:width="140dp"
+        android:height="13dp"
+        android:gravity="center_horizontal"
+        android:top="625dp"
+        tools:ignore="UnusedAttribute">
+        <bitmap android:src="@mipmap/bg4" />
+    </item>
+</layer-list>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/livBetTypeTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:tabIndicatorFullWidth="false"
+        app:tabRippleColor="@color/transparent"
+        app:tabIndicatorColor="@color/alivc_blue_1"
+        app:tabSelectedTextColor="@color/alivc_blue_1"
+        app:tabTextColor="@color/alivc_blue_2" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_live_bet"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

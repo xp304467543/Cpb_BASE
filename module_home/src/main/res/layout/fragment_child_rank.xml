@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.lib.basiclib.base.xui.widget.tabbar.TabControlView
+        android:id="@+id/rank_select"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:gravity="center"
+        app:tcv_defaultSelection="0"
+        app:tcv_equalWidth="true"
+        app:tcv_selectedColor="@color/alivc_blue_1"
+        app:tcv_selectedTextColor="@color/white"
+        app:tcv_textSize="@dimen/sp_12"
+        app:tcv_unselectedColor="@color/white"
+        app:tcv_unselectedTextColor="@color/alivc_blue_2" />
+
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="周榜"
+            android:textColor="@color/alivc_blue_1"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="月榜"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="总榜"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/sp_12" />
+
+    <TextView
+        android:id="@+id/tvRankHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/color_999999"
+        android:text="当前暂无排名哦~"/>
+</LinearLayout>

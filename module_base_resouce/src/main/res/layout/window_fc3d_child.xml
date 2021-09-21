@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_80"
+    android:layout_height="@dimen/dp_20"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.lib.basiclib.base.round.RoundTextView
+        android:layout_width="0dp"
+        app:rv_strokeColor="#bfbfbf"
+        app:rv_strokeWidth="0.25dp"
+        android:text="大小"
+        android:textSize="@dimen/sp_10"
+        android:gravity="center"
+        android:textColor="@color/color_666666"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <com.lib.basiclib.base.round.RoundTextView
+        android:layout_width="0dp"
+        app:rv_strokeColor="#bfbfbf"
+        app:rv_strokeWidth="0.25dp"
+        android:text="单双"
+        android:textSize="@dimen/sp_10"
+        android:gravity="center"
+        android:textColor="@color/color_666666"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <com.lib.basiclib.base.round.RoundTextView
+        android:layout_width="0dp"
+        app:rv_strokeColor="#bfbfbf"
+        app:rv_strokeWidth="0.25dp"
+        android:text="质合"
+        android:textSize="@dimen/sp_10"
+        android:gravity="center"
+        android:textColor="@color/color_666666"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+</LinearLayout>

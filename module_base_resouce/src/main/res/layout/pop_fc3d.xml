@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_grey_line_white_background">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dp_10"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_1s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_4"
+                android:text="标记号码"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.lib.basiclib.base.round.RoundTextView
+                android:id="@+id/tvClear"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:gravity="center"
+                android:text="清空"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_1s"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_1s"
+                app:rv_backgroundColor="#51A6FF"
+                app:rv_cornerRadius="@dimen/dp_5" />
+
+
+            <LinearLayout
+                android:id="@+id/layoutNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                app:layout_constraintTop_toBottomOf="@+id/tvClear">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_sel_0"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:background="@drawable/shape_round"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/color_333333" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_sel_1"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:background="@drawable/shape_round"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/color_333333" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_sel_2"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:background="@drawable/shape_round"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/color_333333" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_sel_3"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:background="@drawable/shape_round"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/color_333333" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_sel_4"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:background="@drawable/shape_round"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="@color/color_333333" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_sel_5"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:background="@drawable/shape_round"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textColor="@color/color_333333" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_sel_6"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:background="@drawable/shape_round"
+                    android:gravity="center"
+                    android:text="6"
+                    android:textColor="@color/color_333333" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_sel_7"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:background="@drawable/shape_round"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="@color/color_333333" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_sel_8"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:background="@drawable/shape_round"
+                    android:gravity="center"
+                    android:text="8"
+                    android:textColor="@color/color_333333" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/view_sel_9"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:background="@drawable/shape_round"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="@color/color_333333" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="标记号码"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutNum" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                app:layout_constraintTop_toBottomOf="@+id/tv_2">
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/view_sel_da"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="大"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.5dp" />
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/view_sel_xiao"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="小"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.5dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1" />
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/view_sel_dan"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="单"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.5dp" />
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/view_sel_shuang"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="双"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.5dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1" />
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/view_sel_zhi"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="质"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.5dp" />
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/view_sel_he"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="合"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.5dp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.25dp"
+            android:background="#bfbfbf"
+            app:layout_constraintBottom_toTopOf="@+id/layout3" />
+
+
+        <View
+            android:id="@+id/viewTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:background="@color/grey_f5f7fa"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTop" />
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTop">
+
+            <com.lib.basiclib.base.round.RoundTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:gravity="center"
+                android:text="期号"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/sp_10"
+                app:rv_strokeColor="#bfbfbf"
+                app:rv_strokeWidth="0.25dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvIssue"
+                android:layout_width="match_parent"
+                android:layout_height="280dp" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="@+id/layout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/layout3"
+            app:layout_constraintTop_toTopOf="@+id/layout3">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/t1_s"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_22"
+                    android:gravity="center"
+                    android:text="开奖号码"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.25dp" />
+
+                <com.lib.basiclib.base.round.RoundLinearLayout
+                    android:id="@+id/layout_1s"
+                    android:layout_width="80dp"
+                    android:layout_height="22dp"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t1_s"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.25dp">
+
+                    <com.lib.basiclib.base.round.RoundTextView
+                        android:id="@+id/tvMark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawablePadding="@dimen/dp_2"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxEms="14"
+                        android:maxLines="1"
+                        android:text="标记"
+                        android:textColor="@color/alivc_blue_1"
+                        android:textSize="@dimen/sp_9"
+                        app:drawableEndCompat="@mipmap/ic_arrow_bt" />
+
+                </com.lib.basiclib.base.round.RoundLinearLayout>
+
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/t2_s"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_22"
+                    android:gravity="center"
+                    android:text="百"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintStart_toEndOf="@+id/t1_s"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.25dp" />
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/t3_s"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_22"
+                    android:gravity="center"
+                    android:text="十"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintStart_toEndOf="@+id/t2_s"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.25dp" />
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/t4_s"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="@dimen/dp_22"
+                    android:gravity="center"
+                    android:text="个"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintStart_toEndOf="@+id/t3_s"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.25dp" />
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:id="@+id/t5_s"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_22"
+                    android:gravity="center"
+                    android:text="总和"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/sp_10"
+                    app:layout_constraintStart_toEndOf="@+id/t4_s"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rv_strokeColor="#bfbfbf"
+                    app:rv_strokeWidth="0.25dp" />
+
+                <include
+                    android:id="@+id/i_s1"
+                    layout="@layout/window_fc3d_child"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/layout_1s"
+                    app:layout_constraintTop_toBottomOf="@+id/t1_s" />
+
+                <include
+                    android:id="@+id/i_s2"
+                    layout="@layout/window_fc3d_child"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/i_s1"
+                    app:layout_constraintTop_toBottomOf="@+id/t1_s" />
+
+
+                <include
+                    android:id="@+id/i_s3"
+                    layout="@layout/window_fc3d_child"
+                    android:layout_width="@dimen/dp_80"
+                    android:layout_height="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/i_s2"
+                    app:layout_constraintTop_toBottomOf="@+id/t1_s" />
+
+                <LinearLayout
+                    android:id="@+id/i_s4"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_22"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/i_s3"
+                    app:layout_constraintTop_toBottomOf="@+id/t1_s">
+
+                    <com.lib.basiclib.base.round.RoundTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="大小"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_10"
+                        app:rv_strokeColor="#bfbfbf"
+                        app:rv_strokeWidth="0.25dp" />
+
+                    <com.lib.basiclib.base.round.RoundTextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="单双"
+                        android:textColor="@color/color_666666"
+                        android:textSize="@dimen/sp_10"
+                        app:rv_strokeColor="#bfbfbf"
+                        app:rv_strokeWidth="0.25dp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvContent"
+                    android:layout_width="0dp"
+                    android:layout_height="280dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_1s" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_34"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_34"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/layout3">
+
+            <com.lib.basiclib.base.round.RoundTextView
+                android:id="@+id/tvClose"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_11"
+                app:rv_backgroundColor="#F6F7FB"
+                app:rv_cornerRadius="@dimen/dp_15"
+                app:rv_strokeColor="@color/color_999999"
+                app:rv_strokeWidth="0.5dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLookMore"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_weight="1"
+                android:background="@drawable/button_blue_background"
+                android:gravity="center"
+                android:text="查看完整走势"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

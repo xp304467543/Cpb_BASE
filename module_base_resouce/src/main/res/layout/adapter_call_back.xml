@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/tvCheck"
+    android:layout_width="@dimen/dp_76"
+    android:layout_height="@dimen/dp_34"
+    android:layout_marginTop="@dimen/dp_5"
+    android:textSize="@dimen/sp_10"
+    android:paddingStart="@dimen/dp_8"
+    android:paddingEnd="@dimen/dp_8"
+    android:gravity="center"
+    android:textColor="@color/color_999999"
+    android:background="@drawable/radio_button_normal"
+    android:layout_marginStart="@dimen/dp_5"/>
+

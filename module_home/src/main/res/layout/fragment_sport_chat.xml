@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/grey_f5f7fa">
+
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/sportRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
+        app:layout_constraintBottom_toTopOf="@+id/holderView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sportChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+    <com.lib.basiclib.base.round.RoundLinearLayout
+        android:id="@+id/linEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:visibility="gone"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/inputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rv_backgroundColor="#2CF1F1F1"
+        app:rv_cornerRadius="@dimen/dp_15"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/imgEnterImg"
+            android:layout_width="@dimen/dp_34"
+            android:layout_height="@dimen/dp_14"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_2"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tvEnterContent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="1111111"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/sp_12" />
+    </com.lib.basiclib.base.round.RoundLinearLayout>
+
+    <View
+        android:id="@+id/holderView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <com.lib.basiclib.base.round.RoundTextView
+        android:id="@+id/tvMoreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/dp_8"
+        android:text="@string/live_news"
+        android:textColor="@color/colorBlue"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/sportRefresh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rv_backgroundColor="#FFFFFF"
+        app:rv_cornerRadius="@dimen/dp_6" />
+
+    <RelativeLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/layoutInput"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_35"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvVipCan"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_grey_background"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:text="骑士 即可发言哦~"
+                    android:textColor="@color/grey_97"
+                    android:textSize="@dimen/sp_13" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTalk"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:background="@drawable/button_grey_background"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_10"
+                    android:text="@string/mine_say_some"
+                    android:textColor="@color/grey_97"
+                    android:textSize="@dimen/sp_13" />
+
+                <com.lib.basiclib.base.round.RoundTextView
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="发送"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    app:rv_backgroundColor="@color/alivc_blue_4"
+                    app:rv_cornerRadius="@dimen/dp_5" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvNoInput"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="未开播禁止发言"
+            android:textColor="@color/grey_e6"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

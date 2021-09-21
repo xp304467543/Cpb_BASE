@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bet">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application >
+
+        <meta-data
+            android:name="host_component"
+            android:value="Home" />
+
+        <activity
+            android:name=".game.GameLotteryBetActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:theme="@style/SwipeBackStyle" />
+        <activity android:name=".game.GameLotteryBetToolsActivity"
+            android:theme="@style/SwipeBackStyle" />
+    </application>
+</manifest>

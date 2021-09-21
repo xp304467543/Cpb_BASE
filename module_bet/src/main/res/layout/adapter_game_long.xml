@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lib.basiclib.base.round.RoundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_160"
+    android:layout_marginStart="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginEnd="@dimen/dp_10"
+    app:rv_backgroundColor="@color/grey_f5f7fa"
+    app:rv_cornerRadius="@dimen/dp_5"
+    app:rv_strokeColor="@color/color_EEEEEE"
+    app:rv_strokeWidth="0.5dp">
+
+
+    <com.lib.basiclib.base.round.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rv_cornerRadius="@dimen/dp_5"
+        android:orientation="vertical">
+
+
+        <com.lib.basiclib.base.round.RoundLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:orientation="horizontal"
+            app:rv_cornerRadius_TL="@dimen/dp_5"
+            app:rv_cornerRadius_TR="@dimen/dp_5"
+            app:rv_backgroundColor="@color/white"
+            app:rv_strokeColor="@color/color_EEEEEE"
+            app:rv_strokeWidth="0.5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold"
+                tools:text="其咋说的" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="第"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvIssue"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:gravity="center"
+                android:text="99999999"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:gravity="center"
+                android:text="期"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_12"
+                android:textStyle="bold" />
+
+        </com.lib.basiclib.base.round.RoundLinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCodeIssue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="第五期"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.customer.cutdown.TimingTextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="--:--"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@+id/tvCodeIssue"
+                app:layout_constraintTop_toBottomOf="@+id/tvCodeIssue" />
+
+            <LinearLayout
+                android:id="@+id/layout_1"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/white_round"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_2"
+                app:layout_constraintEnd_toStartOf="@+id/layout_2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFirst_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="龙"
+                    android:textColor="@color/text_red"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFirst_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1.998"
+                    android:textColor="@color/text_red"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_2"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:background="@drawable/white_round"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layout_1">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSecond_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="虎"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSecond_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1.998"
+                    android:textColor="@color/colorBlue"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgPk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@mipmap/ic_pk"
+                android:layout_marginStart="@dimen/dp_2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_1" />
+
+            <RelativeLayout
+                android:id="@+id/layoutPro"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="4dp"
+                android:paddingStart="@dimen/dp_2"
+                android:paddingEnd="@dimen/dp_2"
+                app:layout_constraintTop_toBottomOf="@+id/imgPk">
+
+                <ProgressBar
+                    android:id="@+id/pro1"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:progress="20"
+                    android:max="100"
+                    android:progressDrawable="@drawable/layer_list_progress_tiger" />
+
+                <ProgressBar
+                    android:id="@+id/pro2"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:progress="90"
+                    android:max="100"
+                    android:progressDrawable="@drawable/layer_list_progress_long" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPro">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="虎"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="  连开  "
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTypeNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="9"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/sp_12" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="  期"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.lib.basiclib.base.round.RoundLinearLayout>
+
+    <com.lib.basiclib.base.round.RoundTextView
+        android:id="@+id/tvClosePan"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:rv_cornerRadius="@dimen/dp_5"
+        android:clickable="true"
+        android:textColor="@color/white"
+        android:text="已 封 盘"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:rv_backgroundColor="@color/transparent_05"
+        android:focusable="true" />
+</com.lib.basiclib.base.round.RoundRelativeLayout>

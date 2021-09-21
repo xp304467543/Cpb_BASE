@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/menuBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/menu_bt" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlOpen"
+        android:layout_width="244dp"
+        android:layout_height="244dp"
+        android:visibility="gone"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/menu_bg" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgClose"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/menu_close" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/menu_1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="45dp"
+            android:src="@mipmap/menu_b4" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/menu_2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="35dp"
+            android:src="@mipmap/menu_b5" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/menu_3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/menu_2"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/menu_b1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/menu_4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/menu_2"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="6dp"
+            android:src="@mipmap/menu_b6" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/menu_5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toEndOf="@+id/menu_3"
+            android:src="@mipmap/menu_b2" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

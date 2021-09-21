@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- cardView -->
+    <declare-styleable name="LCardView">
+
+        <attr name="leftShadowWidth" format="dimension" />
+        <attr name="topShadowHeight" format="dimension" />
+        <attr name="rightShadowWidth" format="dimension" />
+        <attr name="bottomShadowHeight" format="dimension" />
+        <attr name="shadowSize" format="dimension" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowStartAlpha" format="integer" />
+        <attr name="shadowFluidShape" format="enum">
+            <enum name="adsorption" value="0" />
+            <enum name="linear" value="1" />
+        </attr>
+        <attr name="cardBackgroundColor" format="color" />
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="leftTopCornerRadius" format="dimension" />
+        <attr name="rightTopCornerRadius" format="dimension" />
+        <attr name="leftBottomCornerRadius" format="dimension" />
+        <attr name="rightBottomCornerRadius" format="dimension" />
+        <attr name="elevation" format="dimension" />
+        <attr name="elevationAffectShadowColor" format="boolean" />
+        <attr name="elevationAffectShadowSize" format="boolean" />
+        <attr name="xOffset" format="dimension" />
+        <attr name="yOffset" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MineItem">
+        <attr name="ItemIcon" format="reference" />
+        <attr name="ItemName" format="string" />
+        <attr name="IWidth" format="dimension" />
+        <attr name="IHeight" format="dimension" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="MarqueeView">
+        <attr name="marqueeAnimDuration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleMarqueeView">
+        <attr name="smvTextColor" format="reference|color" />
+        <attr name="smvTextSize" format="dimension" />
+        <!--https://github.com/android/platform_frameworks_base/blob/master/core/res/res/values/attrs.xml-->
+        <attr name="smvTextGravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30" />
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50" />
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10" />
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70" />
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01" />
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07" />
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77" />
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
+                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80" />
+            <!-- Additional option that can be set to have the left and/or right edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the horizontal gravity: a left gravity will clip the right
+                 edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08" />
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003" />
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="smvTextSingleLine" format="boolean" />
+        <!-- Where to ellipsize text. -->
+        <attr name="smvTextEllipsize">
+            <enum name="none" value="0" />
+            <enum name="start" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="end" value="3" />
+        </attr>
+
+    </declare-styleable>
+    <!-- MarqueeTextView -->
+    <declare-styleable name="MarqueeTextView">
+        <!--滚动速度， 默认为3-->
+        <attr name="mtv_speed" format="integer" />
+        <!--尺寸是否自适应， 默认false-->
+        <attr name="mtv_isAutoFit" format="boolean" />
+        <!--控件是否自动显示与隐藏（根据显示数量）， 默认false-->
+        <attr name="mtv_isAutoDisplay" format="boolean" />
+    </declare-styleable>
+
+    <!-- AutoWrap -->
+    <!--网格线宽-->
+    <attr name="autowrap_gridLineWidth" format="dimension|reference" />
+    <!--网格线颜色-->
+    <attr name="autowrap_gridLineColor" format="reference|color" />
+    <!--单元格宽-->
+    <attr name="autowrap_gridCellWidth" format="dimension|reference" />
+    <!--单元格高-->
+    <attr name="autowrap_gridCellHeight" format="dimension|reference" />
+    <!--单元格内对齐方式-->
+    <attr name="autowrap_gridCellGravity">
+        <flag name="left" value="1" />
+        <flag name="top" value="2" />
+        <flag name="right" value="4" />
+        <flag name="bottom" value="8" />
+        <flag name="center" value="16" />
+        <flag name="fill" value="32" />
+    </attr>
+    <!--firstChild独占一行-->
+    <attr name="autowrap_stickFirst" format="boolean" />
+
+    <declare-styleable name="AutoWrapGridLayout">
+        <!--网格线宽-->
+        <attr name="autowrap_gridLineWidth" />
+        <!--网格线颜色-->
+        <attr name="autowrap_gridLineColor" />
+        <!--单元格宽-->
+        <attr name="autowrap_gridCellWidth" />
+        <!--单元格高-->
+        <attr name="autowrap_gridCellHeight" />
+        <!--单元格内对齐方式-->
+        <attr name="autowrap_gridCellGravity" />
+        <!--firstChild独占一行-->
+        <attr name="autowrap_stickFirst" />
+    </declare-styleable>
+
+    <declare-styleable name="switchButton">
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="sw_textArray" format="string" />
+        <attr name="sw_switchCount" format="integer" />
+        <attr name="sw_ThemeStyle" format="reference" />
+        <attr name="sw_CornerRadius" format="dimension" />
+        <attr name="sw_checkedColor" format="color|reference" />
+        <attr name="sw_unCheckedColor" format="color|reference" />
+        <attr name="sw_strokeColor" format="color|reference" />
+        <attr name="sw_strokeWidth" format="dimension" />
+    </declare-styleable>
+
+
+    <!--圆弧进度条-->
+    <declare-styleable name="TasksCompletedView">
+        <!--内圆半径-->
+        <attr name="radius" format="dimension" />
+        <!--内圆颜色-->
+        <attr name="circleColor" format="color" />
+        <!--进度条宽度-->
+        <attr name="progressWidth" format="dimension" />
+        <!--进度条颜色-->
+        <attr name="progressColor" format="color" />
+        <!--进度条背景色-->
+        <attr name="progressBgColor" format="color" />
+        <!--进度条中间的文字-->
+        <attr name="progressText" format="string" />
+        <!--进度条中间的文字大小-->
+        <attr name="progressTextSize" format="dimension" />
+        <!--进度条中间的文字颜色-->
+        <attr name="progressTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleLoadingView">
+        <!--圆弧宽度-->
+        <attr name="arcWidth" format="dimension" />
+        <!--加载动画的颜色-->
+        <attr name="loadingColor" format="color" />
+        <!--环形圆点的数量-->
+        <attr name="dotSize" format="integer" />
+        <!--圆环转动一周的时间-->
+        <attr name="durationTime" format="float" />
+        <!--每周期圆点旋转的角度-->
+        <attr name="dotAngle" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="DefaultCloseView">
+        <!--区域默认颜色-->
+        <attr name="normalColor" format="color" />
+        <!--区域选中颜色-->
+        <attr name="inRangeColor" format="color" />
+        <!--区域形状-->
+        <attr name="shapeType" format="enum">
+            <enum name="oval" value="0" />
+            <enum name="rect" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+        <!--选中切换时的缩放大小-->
+        <attr name="zoomSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SubsamplingScaleImageView">
+        <attr name="src" format="reference"/>
+        <attr name="assetName" format="string"/>
+        <attr name="panEnabled" format="boolean"/>
+        <attr name="zoomEnabled" format="boolean"/>
+        <attr name="quickScaleEnabled" format="boolean"/>
+        <attr name="tileBackgroundColor" format="color"/>
+    </declare-styleable>
+</resources>

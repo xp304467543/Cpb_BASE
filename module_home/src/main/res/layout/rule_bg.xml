@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lib.basiclib.base.round.RoundTextView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/tvRule"
+    android:layout_width="60dp"
+    android:layout_height="25dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:rv_backgroundColor="@color/grey_f5f7fa"
+    android:gravity="center"
+    android:layout_marginStart="10dp"
+    android:textSize="9sp"
+    android:textColor="@color/color_333333"
+    app:rv_cornerRadius="20dp">
+
+</com.lib.basiclib.base.round.RoundTextView>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lib.basiclib.base.round.RoundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_180"
+    app:rv_backgroundColor="@color/white"
+    android:padding="@dimen/dp_10"
+    app:rv_cornerRadius="@dimen/dp_5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="提示"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/color_333333"
+        android:textStyle="bold" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/close"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/dp_13"
+        android:src="@mipmap/ic_close" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:text="当前系统仅开放彩票游戏试玩，如有\n其他需要请登录正式账户。"
+        android:textColor="#FF666666" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tLogin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/color_666666"
+            android:background="@drawable/button_grey_background" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tReg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="@color/white"
+            android:background="@drawable/button_blue_background" />
+    </LinearLayout>
+
+</com.lib.basiclib.base.round.RoundRelativeLayout>

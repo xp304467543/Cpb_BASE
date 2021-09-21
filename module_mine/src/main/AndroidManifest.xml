@@ -1,0 +1,178 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mine">
+
+
+    <application>
+
+        <activity
+            android:name=".children.MineSettingAct"
+
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.MineModifyPassWordAct"
+
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.MineSetPayPassWordAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.MineContentGroupAct"
+
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.MineFeedBackAct"
+
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.report.team.MineReportAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.report.team.MineReportPosterAct"
+
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.report.team.MineReportSearchAct"
+
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.report.game.MineGameReportAct"
+
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.report.game.MineGameReportMoreAct"
+
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.report.game.MineGameReportMoreInfoAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.MineAnchorRecruitAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.MineBillAct"
+
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.message.MineMessageCenterAct"
+
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity android:name=".children.message.MineMessageAct"
+            android:theme="@style/SwipeBackStyle"/>
+        <activity
+            android:name=".children.message.MineMessageCenterInfoAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.MineAttentionAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineRechargeAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineUserBankCardListAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.mine.children.recharge.MineCardRechargeAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.mine.children.recharge.MineRechargeCardContactAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineAddBankCardAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.MinePersonalAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.skin.MineSkinAct"
+
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.skin.MineSkinInfoAct"
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.MineMoneyCenterAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineBankCardRechargeAct"
+            android:theme="@style/SwipeBackStyle" />
+
+        <activity
+            android:name=".children.recharge.MineUserBankCardAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineUserAddBankCard"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.MineScanAct"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".children.MineScanResultAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.vip.MineVipInfoActivity"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.vip.MineVipPageActivity"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.noble.MineNobleActivity"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.movie.MineMovieActivity"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.vip.MineVipGiftActivity"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineRechargeTeach"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineUsdRgRecharge"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.MineAddUstdAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineUsdtListAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineUsdtUsdAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineUsdRecharge"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.recharge.MineWeChatRecharge"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.MinePriseAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".children.MinePriseInfoAct"
+            android:theme="@style/SwipeBackStyle" />
+    </application>
+
+
+</manifest>

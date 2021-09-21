@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <FrameLayout
+                android:id="@+id/mainContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/rg_oder">
+
+            </FrameLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_oder"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/background_half_round"
+                android:clipChildren="false"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tabHome"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/button_tab_home"
+                    android:gravity="center"
+                    android:text="@string/tab_home"
+                    android:background="@null"
+                    android:textColor="@drawable/tab_text_selector_1"
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp" />
+
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tabLive"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/dp_5"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableTop="@drawable/button_tab_live"
+                    android:gravity="center"
+                    android:text="@string/tab_live"
+                    android:background="@null"
+                    android:textColor="@drawable/tab_text_selector_1"
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tabChunGame"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/dp_5"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:visibility="gone"
+                    android:drawableTop="@drawable/button_tab_game"
+                    android:gravity="center"
+                    android:text="游戏"
+                    android:background="@null"
+                    android:textColor="@drawable/tab_text_selector_1"
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tabChunOpen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:visibility="gone"
+                    android:drawableTop="@drawable/button_tab_lotter"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dp_5"
+                    android:text="开奖"
+                    android:background="@null"
+                    android:textColor="@drawable/tab_text_selector_1"
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp"/>
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tabLotteryOpen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:paddingTop="@dimen/dp_5"
+                    android:checked="false"
+                    android:background="@null"
+                    android:drawableTop="@drawable/button_tab_discount"
+                    android:gravity="center"
+                    android:text="优惠"
+                    android:textColor="@drawable/tab_text_selector_1"
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp"/>
+
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tabDisCount"
+                    android:layout_width="0dp"
+                    android:background="@null"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:paddingTop="@dimen/dp_5"
+                    android:drawableTop="@drawable/button_tab_customer"
+                    android:gravity="center"
+                    android:text="客服"
+                    android:textColor="@drawable/tab_text_selector_1"
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/tabMine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingTop="@dimen/dp_5"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@null"
+                    android:drawableTop="@drawable/button_tab_mine"
+                    android:gravity="center"
+                    android:text="@string/tab_mine"
+                    android:textColor="@drawable/tab_text_selector_1"
+                    android:textSize="8sp"
+                    tools:ignore="SmallSp" />
+            </RadioGroup>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

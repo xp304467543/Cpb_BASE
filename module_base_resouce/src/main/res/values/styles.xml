@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 默认主题 Tab 颜色-->
+    <style name="TabNormal" parent="Base.Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorRed</item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+        <item name="tabSelectedTextColor">#040404</item>
+        <item name="tabTextColor">#B8B8B8</item>
+        <item name="tabIndicatorFullWidth">false</item>
+    </style>
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/grey_dd</item>
+        <item name="colorControlActivated">@color/color_FF513E</item>
+    </style>
+
+    <style name="My_CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:colorControlActivated" tools:targetApi="lollipop">@color/alivc_blue_1</item>
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">@color/alivc_blue_2</item>
+    </style>
+
+
+    <!-- 拖拽view-->
+    <declare-styleable name="AttachButton">
+        <!--是否需要自动吸边-->
+        <attr name="customIsAttach" format="boolean" />
+        <!--是否可拖曳-->
+        <attr name="customIsDrag" format="boolean" />
+    </declare-styleable>
+
+    <style name="TabNormalWhite" parent="Base.Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">#FFFFFF</item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+        <item name="tabSelectedTextColor">#FFFFFF</item>
+        <item name="tabTextColor">#FFFFFF</item>
+        <item name="tabIndicatorFullWidth">false</item>
+    </style>
+
+    <style name="Theme.Crop" parent="Theme.AppCompat.NoActionBar">
+        <item name="listPreferredItemHeightSmall">48dp</item>
+        <item name="switchStyle">@android:style/Widget.CompoundButton</item>
+        <item name="android:displayOptions" />
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:actionBarStyle">@style/Holo.ActionBar</item>
+        <!--        <item name="android:colorBackground">@null</item>-->
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <!--        <item name="android:windowBackground">@drawable/filtershow_tiled_background</item>-->
+        <item name="android:windowBackground">#000000</item>
+    </style>
+
+    <style name="Holo.ActionBar" parent="android:Widget.Holo.ActionBar">
+        <item name="android:displayOptions">useLogo|showHome</item>
+        <item name="android:background">@drawable/actionbar_translucent</item>
+        <item name="android:backgroundStacked">@null</item>
+    </style>
+    <declare-styleable name="SeparatedEditText">
+        <attr name="password" format="boolean" />
+        <attr name="showCursor" format="boolean" />
+        <attr name="separateType" format="reference|integer" />
+        <attr name="maxLength" format="integer" />
+        <attr name="corner" format="dimension" />
+        <attr name="borderColor" format="color|reference" />
+        <attr name="blockColor" format="color|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="blockSpacing" format="dimension" />
+        <attr name="cursorDuration" format="integer" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="color|reference" />
+        <attr name="borderWidth" format="dimension" />
+    </declare-styleable>
+
+    <integer name="type_hollow">1</integer>
+    <integer name="type_solid">2</integer>
+    <integer name="type_underline">3</integer>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <declare-styleable name="SideslipDeleteLayout">
+        <attr name="swipeEnable" format="boolean" />
+        <attr name="ios" format="boolean" />
+        <attr name="leftSwipe" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PageGridView">
+        <!--每页大小-->
+        <attr name="pageSize" format="integer|reference" />
+        <!--是否显示指示点-->
+        <attr name="isShowIndicator" format="boolean" />
+        <!--选中指示点-->
+        <attr name="selectedIndicator" format="reference" />
+        <!--未选中指示点-->
+        <attr name="unSelectedIndicator" format="reference" />
+        <!--指示器位置-->
+        <attr name="indicatorGravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <!--指示器左内边距-->
+        <attr name="indicatorPaddingLeft" format="dimension" />
+        <!--指示器右内边距-->
+        <attr name="indicatorPaddingRight" format="dimension" />
+        <!--指示器上内边距-->
+        <attr name="indicatorPaddingTop" format="dimension" />
+        <!--指示器下内边距-->
+        <attr name="indicatorPaddingBottom" format="dimension" />
+        <!--指示器内边距-->
+        <attr name="indicatorPadding" format="dimension" />
+        <!--指示器背景颜色-->
+        <attr name="indicatorBackground" format="color" />
+
+        <!--ViewPager背景资源-->
+        <attr name="vpBackground" format="reference|color" />
+
+        <!--ViewPager 内边距-->
+        <attr name="vpPadding" format="dimension" />
+        <!--列数-->
+        <attr name="numColumns" format="integer|reference" />
+        <!--Item布局-->
+        <attr name="itemView" format="reference" />
+
+    </declare-styleable>
+
+    <!-- RewardAnim -->
+    <declare-styleable name="RewardLayout">
+        <attr name="max_gift" format="integer" />
+        <attr name="gift_item_layout" format="reference" />
+    </declare-styleable>
+
+    <style name="FloatWindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_float_window_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_float_window_exit</item>
+    </style>
+    <!--底部弹框动画-->
+    <style name="bottomDialog">
+        <item name="android:windowEnterAnimation">@anim/bottom_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_dialog_out</item>
+    </style>
+
+    <!--Toast动画-->
+    <style name="animToast">
+        <item name="android:windowEnterAnimation">@anim/in_right</item>
+        <item name="android:windowExitAnimation">@anim/out_left</item>
+    </style>
+
+
+
+    <style name="DialogActivity" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--dialog样式的界面-->
+    <style name="dialog_style" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowIsTranslucent">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:backgroundDimEnabled">true</item>
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowCloseOnTouchOutside">true</item>
+    <item name="android:windowIsFloating">true</item>
+</style>
+
+    <style name="dialog_style_no_close" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <declare-styleable name="NewLuckView">
+        <!--奇数扇形的填充色-->
+        <attr name="luck_odd_sector_color" format="color"/>
+
+        <!--偶数扇形的填充色-->
+        <attr name="luck_even_sector_color" format="color"/>
+
+        <!--奖品图片的宽度占转盘直径的比-->
+        <attr name="luck_item_width_ratio" format="float"/>
+
+        <!--奖品图片的高度占转盘直径的比-->
+        <attr name="luck_item_height_ratio" format="float"/>
+
+        <!--奖品图片距离圆心的偏移长度占圆盘半径长度的比-->
+        <attr name="luck_item_offset_ratio" format="float"/>
+
+        <!--奖项字体大小-->
+        <attr name="luck_text_size" format="dimension" />
+
+        <!--奖项字体颜色-->
+        <attr name="luck_text_color" format="color" />
+
+        <!--奖品名称文字距离圆心的长度和半径之比-->
+        <attr name="luck_text_offset_ratio" format="float"/>
+
+        <!--indicator的宽度和转盘直径的比-->
+        <attr name="luck_indicator_width_ratio" format="float"/>
+
+        <!--indicator的高度和转盘直径的比-->
+        <attr name="luck_indicator_height_ratio" format="float"/>
+
+        <!--indicator的高度和转盘直径的比-->
+        <attr name="luck_indicator_drawable" format="reference"/>
+
+        <!--转一圈所需的时间-->
+        <attr name="luck_cycle_millis" format="integer"/>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="CircularProgressView">
+        <attr name="backWidth" format="dimension" />    <!--背景圆环宽度-->
+        <attr name="progWidth" format="dimension" />    <!--进度圆环宽度-->
+        <attr name="backColor" format="color" />        <!--背景圆环颜色-->
+        <attr name="progColor" format="color" />        <!--进度圆环颜色-->
+        <attr name="progStartColor" format="color" />   <!--进度圆环开始颜色-->
+        <attr name="progFirstColor" format="color" />   <!--进度圆环结束颜色-->
+        <attr name="progress" format="integer" />       <!--圆环进度-->
+    </declare-styleable>
+
+    <declare-styleable name="SlideLayout">
+        <attr name="sl_enable" format="boolean" />
+        <attr name="sl_slideSlop" format="dimension" />
+        <attr name="sl_duration" format="integer" />
+    </declare-styleable>
+
+    <!--自定义ViewPager+fragment实现-->
+    <declare-styleable name="EasyNavigationBar">
+        <!--底部导航栏高度-->
+        <attr name="Easy_navigationHeight" format="dimension" />
+        <!--底部导航栏背景-->
+        <attr name="Easy_navigationBackground" format="color" />
+        <!--Tab字体大小-->
+        <attr name="Easy_tabTextSize" format="dimension" />
+        <!--Tab文字距Tab图标的距离-->
+        <attr name="Easy_tabTextTop" format="dimension" />
+        <!--Tab图标大小-->
+        <attr name="Easy_tabIconSize" format="dimension" />
+        <!--Tab未选中字体颜色-->
+        <attr name="Easy_tabNormalColor" format="color" />
+        <!--Tab选中字体颜色-->
+        <attr name="Easy_tabSelectColor" format="color" />
+        <!--提示红点的大小-->
+        <attr name="Easy_hintPointSize" format="dimension" />
+        <!--消息红点的大小-->
+        <attr name="Easy_msgPointSize" format="dimension" />
+        <!--提示红点距Tab图标的距离-->
+        <attr name="Easy_hintPointLeft" format="dimension" />
+        <!--消息红点距Tab图标的距离-->
+        <attr name="Easy_msgPointLeft" format="dimension" />
+        <!--提示红点距离顶部的距离-->
+        <attr name="Easy_hintPointTop" format="dimension" />
+        <!--消息红点距顶部的距离-->
+        <attr name="Easy_msgPointTop" format="dimension" />
+        <!--消息红点数字字体大小-->
+        <attr name="Easy_msgPointTextSize" format="dimension" />
+
+        <!--消息红点99+的长度-->
+        <attr name="Easy_msgPointMoreWidth" format="dimension" />
+        <!--消息红点99+的高度-->
+        <attr name="Easy_msgPointMoreHeight" format="dimension" />
+        <!--消息红点99+的半径-->
+        <attr name="Easy_msgPointMoreRadius" format="integer" />
+        <!--消息红点的颜色-->
+        <attr name="Easy_msgPointColor" format="color" />
+
+
+        <!--分割线高度-->
+        <attr name="Easy_lineHeight" format="dimension" />
+        <!--分割线颜色-->
+        <attr name="Easy_lineColor" format="color" />
+
+        <!--是否有paddingBottom-->
+        <attr name="Easy_hasPadding" format="boolean" />
+
+
+        <!--中间图片的大小-->
+        <attr name="Easy_centerIconSize" format="dimension" />
+        <!--底部导航栏和加号的高度  加号会居中-->
+        <attr name="Easy_centerLayoutHeight" format="dimension" />
+        <!--添加按钮距离底部的距离-->
+        <attr name="Easy_centerLayoutBottomMargin" format="dimension" />
+        <!--图标显示-->
+        <attr name="Easy_scaleType">
+            <flag name="CENTER_INSIDE" value="0" />
+            <flag name="CENTER_CROP" value="1" />
+            <flag name="CENTER" value="2" />
+            <flag name="FIT_CENTER" value="3" />
+            <flag name="FIT_END" value="4" />
+            <flag name="FIT_START" value="5" />
+            <flag name="FIT_XY" value="6" />
+            <flag name="MATRIX" value="7" />
+        </attr>
+
+
+        <!--图标显示-->
+        <attr name="Easy_centerLayoutRule">
+            <flag name="RULE_CENTER" value="0" />
+            <flag name="RULE_BOTTOM" value="1" />
+        </attr>
+        <!-- true 点击加号切换fragment
+         false 点击加号不切换fragment进行其他操作（跳转界面等）-->
+        <attr name="Easy_centerAsFragment" format="boolean" />
+        <attr name="Easy_centerSelectTextColor" format="color" />
+        <attr name="Easy_centerNormalTextColor" format="color" />
+        <attr name="Easy_centerTextSize" format="dimension" />
+        <!--加号文字距离顶部加号的距离-->
+        <attr name="Easy_centerTextTopMargin" format="dimension" />
+        <!--是否和其他tab文字底部对齐-->
+        <attr name="Easy_centerAlignBottom" format="dimension" />
+        <!--文字大小单位DP还是SP-->
+        <attr name="Easy_textSizeType">
+            <flag name="TYPE_DP" value="1" />
+            <flag name="TYPE_SP" value="2" />
+        </attr>
+
+
+    </declare-styleable>
+</resources>

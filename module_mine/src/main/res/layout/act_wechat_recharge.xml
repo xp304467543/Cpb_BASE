@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.customer.component.LCardView
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        app:bottomShadowHeight="@dimen/dp_10"
+        app:cornerRadius="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="@dimen/alivc_common_font_10"
+        android:layout_marginTop="15dp"
+        app:elevationAffectShadowSize="true"
+        app:shadowColor="@color/color_f7f7f7"
+        app:shadowStartAlpha="200">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/weChatCode"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLimit"
+                android:layout_below="@+id/weChatCode"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/alivc_blue_1"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </com.customer.component.LCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/alivc_blue_7"
+        android:text="请填写您的账户和转账信息："/>
+
+
+    <com.lib.basiclib.base.round.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:rv_cornerRadius="5dp"
+        android:paddingEnd="0dp"
+        app:rv_strokeColor="@color/alivc_blue_7"
+        app:rv_strokeWidth="1dp"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="存款人"
+            android:textSize="12sp"
+            android:textColor="#445779"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请输入存款人姓名"
+            android:textColorHint="#6A86B9"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:background="@null"/>
+    </com.lib.basiclib.base.round.RoundLinearLayout>
+
+    <com.lib.basiclib.base.round.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:rv_cornerRadius="5dp"
+        app:rv_strokeColor="@color/alivc_blue_7"
+        app:rv_strokeWidth="1dp"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="转账金额"
+            android:textSize="12sp"
+            android:textColor="#445779"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editMoney"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请输入充值金额"
+            android:inputType="number"
+            android:textColorHint="#6A86B9"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:background="@null"/>
+    </com.lib.basiclib.base.round.RoundLinearLayout>
+
+
+    <com.lib.basiclib.base.round.RoundLinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:rv_cornerRadius="5dp"
+        app:rv_strokeColor="@color/alivc_blue_7"
+        app:rv_strokeWidth="1dp"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="转账时间"
+            android:textSize="12sp"
+            android:textColor="#445779"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColorHint="#6A86B9"
+            android:drawableEnd="@mipmap/arrow_right"
+            android:paddingEnd="10dp"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:background="@null"/>
+    </com.lib.basiclib.base.round.RoundLinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btGoRecharge"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="48dp"
+        android:text="提交充值"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/button_blue_background"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_f5f7fa"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.lib.basiclib.base.round.RoundRelativeLayout
+            android:id="@+id/rvTopLay"
+            android:layout_width="180dp"
+            android:layout_height="32dp"
+            app:rv_backgroundColor="@color/grey_f5f7fa"
+            app:rv_cornerRadius="@dimen/dp_20">
+
+            <com.lib.basiclib.base.round.RoundTextView
+                android:id="@+id/tv_1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="VIP"
+                android:textColor="@color/white"
+                app:rv_backgroundColor="@color/alivc_blue_1"
+                app:rv_cornerRadius="@dimen/dp_20" />
+
+            <com.lib.basiclib.base.round.RoundTextView
+                android:id="@+id/tv_2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:text="贵族"
+                android:textColor="@color/color_333333"
+                app:rv_cornerRadius="@dimen/dp_20" />
+        </com.lib.basiclib.base.round.RoundRelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vipGift"
+        android:layout_below="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@id/tvHolder"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutTop"
+        android:layout_marginTop="@dimen/dp_40"
+        android:textColor="@color/color_999999"
+        android:gravity="center"
+        android:text="暂无礼物"/>
+</RelativeLayout>

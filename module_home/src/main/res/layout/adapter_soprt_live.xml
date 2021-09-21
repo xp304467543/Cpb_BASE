@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.customer.component.LCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:bottomShadowHeight="@dimen/dp_10"
+    app:cornerRadius="@dimen/dp_6"
+    app:elevationAffectShadowSize="true"
+    app:shadowColor="@color/color_f7f7f7"
+    app:shadowStartAlpha="200">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/rlHotLive"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHotLiveLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSportDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:layout_marginTop="@dimen/dp_6"
+                android:text="@string/app_loading"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_9" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgTag"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_25"
+                android:layout_above="@+id/tiaodan"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:background="@mipmap/ic_live_chat_red_envelope"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tiaodan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_40"
+                android:contentDescription="@string/app_confirm"
+                android:src="@mipmap/td"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_controller_bottom_gradient">
+
+                <TextView
+                    android:id="@+id/tvSportLiveIntro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:layout_marginBottom="@dimen/dp_6"
+                    android:ellipsize="end"
+                    android:maxEms="7"
+                    android:maxLines="1"
+                    android:text="@string/app_loading"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10" />
+
+                <TextView
+                    android:id="@+id/tvSportLiveNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_6"
+                    android:ellipsize="end"
+                    android:maxEms="10"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"
+                    android:textStyle="bold"
+                    tools:text="我是标我是标签解说我是标签解说我是标签解说签解说" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        app:srcCompat="@mipmap/ic_sport_default" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_25"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="20:99"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_9"
+                        android:textStyle="bold" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        app:srcCompat="@mipmap/ic_sport_default" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNameLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="china"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_9"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:gravity="center"
+                        android:text="VS"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        android:textStyle="bold|italic" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNameRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="china"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_9"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.lib.basiclib.base.round.RoundRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_36"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rlHotLive"
+            app:rv_backgroundColor="@color/white"
+            app:rv_backgroundPressColor="@color/white"
+            app:rv_cornerRadius_BL="@dimen/dp_6"
+            app:rv_cornerRadius_BR="@dimen/dp_6">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSportLiveName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_6"
+                android:text="@string/app_loading"
+                android:textColor="@color/alivc_blue_2"
+                android:textSize="@dimen/sp_10" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSportLiveStatus"
+                android:layout_width="12dp"
+                android:layout_height="9dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_toEndOf="@+id/tvSportLiveName"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+
+            <com.lib.basiclib.base.round.RoundTextView
+                android:id="@id/tvHotLiveTag"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_17"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_6"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                app:rv_backgroundColor="@color/grey_e6"
+                app:rv_cornerRadius="@dimen/dp_3"
+                tools:text="性感" />
+
+            <ImageView
+                android:id="@+id/ivHotLiveTag"
+                android:layout_width="@dimen/dp_12"
+                android:layout_height="@dimen/dp_12"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_2"
+                android:layout_toStartOf="@+id/tvHotLiveTag"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+        </com.lib.basiclib.base.round.RoundRelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.customer.component.LCardView>

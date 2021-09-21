@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="@dimen/dp_92"
+    android:background="@mipmap/ic_sys_cbg">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgJb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_cbin" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMatchName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="cdjsbdsjkvbv"
+        android:textColor="#445779"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMatchTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="cdjsbdsjkvbv"
+        android:textColor="#7787A5"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatchName"
+        tools:ignore="SmallSp" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="VS"
+        android:textColor="@color/alivc_blue_1"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatchTime" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgT1"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvMatchTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatchName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="dsfsf"
+        android:textColor="#7787A5"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgT1"
+        app:layout_constraintStart_toStartOf="@+id/imgT1"
+        app:layout_constraintTop_toBottomOf="@+id/imgT1"
+        tools:ignore="SmallSp" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgT2"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvMatchTime"
+        app:layout_constraintTop_toBottomOf="@+id/tvMatchName" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="dsfsf"
+        android:textColor="#7787A5"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgT2"
+        app:layout_constraintStart_toStartOf="@+id/imgT2"
+        app:layout_constraintTop_toBottomOf="@+id/imgT2"
+        tools:ignore="SmallSp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

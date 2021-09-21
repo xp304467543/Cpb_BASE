@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fh.module_discount">
+
+    <application >
+
+        <activity android:name="com.discountall.discount.BannerInfo" android:theme="@style/SwipeBackStyle" />
+
+    </application>
+</manifest>

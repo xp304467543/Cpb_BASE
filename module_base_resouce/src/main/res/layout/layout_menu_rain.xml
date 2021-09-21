@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/layoutRain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/menuRed"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/menu_b5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTime"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_52"
+            android:background="@drawable/background_red_rain"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            tools:ignore="SmallSp" />
+    </RelativeLayout>
+
+</RelativeLayout>

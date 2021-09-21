@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linHome"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_40"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dp_10"
+    android:paddingEnd="10dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStart"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.8"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_12" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEnd"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+</LinearLayout>

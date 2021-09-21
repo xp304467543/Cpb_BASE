@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_25"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+    <com.lib.basiclib.base.round.RoundTextView
+        android:id="@+id/textLine"
+        android:layout_width="@dimen/dp_14"
+        android:layout_height="@dimen/dp_3"
+        app:rv_backgroundColor="@color/alivc_blue_1"
+        app:rv_cornerRadius="@dimen/dp_5" />
+</LinearLayout>

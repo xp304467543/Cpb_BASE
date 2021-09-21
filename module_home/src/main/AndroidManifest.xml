@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.home">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <application>
+
+        <meta-data
+            android:name="host_component"
+            android:value="Home" />
+
+        <activity
+            android:name="com.home.live.room.LiveRoomActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.home.live.room.LiveSportRoomAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.login.LoginAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.home.children.NewsAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.home.children.LivePreAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.home.children.MoreAnchorAct"
+            android:configChanges="keyboard|orientation|screenSize"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.home.video.more.VideoMoreAct"
+            android:configChanges="keyboard|orientation|screenSize"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.home.video.search.VideoSearchAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.home.video.play.VideoPlayAct"
+            android:configChanges="keyboard|orientation|screenSize"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.home.live.search.LiveSearchActivity"
+            android:configChanges="keyboard|orientation|screenSize"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.home.live.children.LiveRoomPostCardAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.home.children.HomeNewHandTask"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name="com.home.live.children.TexsA"
+            android:configChanges="keyboard|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.home.rank.HomeRankingActivity"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".game.HomeGameAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".lottery.HomeLotteryOpenAct"
+            android:theme="@style/SwipeBackStyle" />
+        <activity
+            android:name=".game.HomeGameRecentActivity"
+            android:theme="@style/SwipeBackStyle" />
+    </application>
+</manifest>

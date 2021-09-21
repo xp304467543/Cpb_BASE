@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <androidx.appcompat.widget.AppCompatTextView
+       android:id="@+id/changeMatch"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:drawableStart="@mipmap/ic_match_next"
+       android:text="换一批"
+       android:textColor="@color/white"
+       android:drawablePadding="5dp"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintEnd_toEndOf="@+id/matchBg"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/matchBg"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changeMatch"
+        app:srcCompat="@mipmap/ic_rec_dia" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMatchGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/matchBg"
+        app:layout_constraintStart_toStartOf="@+id/matchBg"
+        app:layout_constraintTop_toTopOf="@+id/matchBg" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btGo"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:text="来一注  >>"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/button_blue_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchBg" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btClose"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        app:srcCompat="@mipmap/ic_close_round"
+        app:layout_constraintStart_toStartOf="@+id/btGo"
+        app:layout_constraintEnd_toEndOf="@+id/btGo"
+        app:layout_constraintTop_toBottomOf="@+id/btGo"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
