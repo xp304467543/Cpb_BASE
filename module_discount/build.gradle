@@ -28,5 +28,4 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     kapt plugin.compiler
     api project(':module_base_resouce')
-
 }

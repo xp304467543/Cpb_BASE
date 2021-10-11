@@ -59,12 +59,22 @@ class GlobalWebAct : BaseNavActivity() {
             }else initNewView()
         }else{
             setPageTitle(intent?.getStringExtra("title"))
-            byWebView = ByWebView
-                .with(this)
-                .isOpenResize(intent.getBooleanExtra("isOpenResize",true))
-                .setWebParent(rootWeb, LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT))
-                .useWebProgress(ContextCompat.getColor(this, R.color.alivc_blue_1))
-                .loadForm(getForm())
+            byWebView = if (intent.getStringExtra("webActForm") == "" || intent.getStringExtra("webActForm") == null){
+                ByWebView
+                    .with(this)
+                    .isOpenResize(intent.getBooleanExtra("isOpenResize",true))
+                    .setWebParent(rootWeb, LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT))
+                    .useWebProgress(ContextCompat.getColor(this, R.color.alivc_blue_1))
+                    .loadUrl(intent.getStringExtra("webActAddress"))
+            }else{
+                ByWebView
+                    .with(this)
+                    .isOpenResize(intent.getBooleanExtra("isOpenResize",true))
+                    .setWebParent(rootWeb, LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT))
+                    .useWebProgress(ContextCompat.getColor(this, R.color.alivc_blue_1))
+                    .loadForm(getForm())
+            }
+
 
         }
 

@@ -29,12 +29,6 @@ class DiscountFragmentChildPresenter1 : BaseMvpPresenter<DiscountFragmentChild1>
                     if (!beanData.isNullOrEmpty()){
                         mView.setGone(mView.tvHolder)
                       if (isRefresh) {
-                          if (type == 0){
-                              beanData.add(0,DiscountContent(specialId = 1))
-                              beanData.add(1,DiscountContent(specialId = 2))
-                              beanData.add(2,DiscountContent(specialId = 3))
-                              beanData.add(3,DiscountContent(specialId = 4))
-                          }
                           mView.discountAdapter?.refresh(beanData)
                           mView.discountSmartRefreshLayout?.finishRefresh()
                       } else  {

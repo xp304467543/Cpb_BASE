@@ -43,7 +43,7 @@ object ApiConstant {
 
     const val API_VIDEO_TEST ="http://52.220.233.230:18306/"
 
-    const val  isTest = true
+    const val  isTest = false
 
 
 

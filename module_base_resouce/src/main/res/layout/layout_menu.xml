@@ -14,10 +14,9 @@
 
     <RelativeLayout
         android:id="@+id/rlOpen"
-        android:layout_width="244dp"
-        android:layout_height="244dp"
         android:visibility="gone"
-        >
+        android:layout_width="244dp"
+        android:layout_height="244dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="wrap_content"
@@ -36,17 +35,17 @@
             android:id="@+id/menu_1"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
             android:src="@mipmap/menu_b4" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/menu_2"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginStart="26dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="55dp"
             android:src="@mipmap/menu_b5" />
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -54,20 +53,18 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_below="@+id/menu_2"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="34dp"
             android:src="@mipmap/menu_b1" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/menu_4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_below="@+id/menu_2"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="6dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toEndOf="@+id/menu_3"
             android:src="@mipmap/menu_b6" />
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -78,7 +75,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginBottom="6dp"
             android:layout_toEndOf="@+id/menu_3"
-            android:src="@mipmap/menu_b2" />
+            android:src="@mipmap/menu_b2"
+            android:visibility="gone" />
 
     </RelativeLayout>
 

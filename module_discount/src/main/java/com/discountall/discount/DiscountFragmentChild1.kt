@@ -1,5 +1,6 @@
 package com.discountall.discount
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,7 +47,7 @@ class DiscountFragmentChild1 : BaseNormalFragment<DiscountFragmentChildPresenter
 
 
     override fun initData() {
-        val data = arguments?.getParcelableArray("discountData")
+//        val data = arguments?.getParcelableArray("discountData")
         current = arguments?.getInt("index") ?: -1
 //        if (current == 0) {
 //            if (!data.isNullOrEmpty()) {
@@ -64,10 +65,10 @@ class DiscountFragmentChild1 : BaseNormalFragment<DiscountFragmentChildPresenter
             page = 0
             mPresenter.getList(current, page)
         }
-
         discountSmartRefreshLayout?.setOnLoadMoreListener {
-            page++
-            mPresenter.getList(current, page, false)
+//            page++
+//            mPresenter.getList(current, page, false)
+            discountSmartRefreshLayout?.finishLoadMoreWithNoMoreData()
         }
     }
 
@@ -76,23 +77,22 @@ class DiscountFragmentChild1 : BaseNormalFragment<DiscountFragmentChildPresenter
         override fun getItemLayoutId(viewType: Int) = R.layout.adapter_discount_list
 
         override fun bindData(holder: RecyclerViewHolder, position: Int, data: DiscountContent?) {
-            if (data?.specialId == 0) {
                 context?.let {
                     GlideUtil.loadImageBanner(
                         it,
-                        data.cover,
+                        data?.cover,
                         holder.findViewById(R.id.imgDiscount)
                     )
                 }
                 context?.let {
                     GlideUtil.loadImageBanner(
                         it,
-                        data.type_icon,
+                        data?.type_icon,
                         holder.findViewById(R.id.imgType)
                     )
                 }
-                holder.text(R.id.tvType, data.type_text)
-                when (data.type) {
+                holder.text(R.id.tvType, data?.type_text)
+                when (data?.type) {
                     7 -> holder.textColorId(R.id.tvType, R.color.color_333333)
                     else -> holder.textColorId(R.id.tvType, R.color.white)
                 }
@@ -101,22 +101,16 @@ class DiscountFragmentChild1 : BaseNormalFragment<DiscountFragmentChildPresenter
                         Router.withApi(ApiRouter::class.java).toGlobalWebSpecial(
                             isOpenResize = false,
                             isString = true,
-                            webActForm = data.content ?: "",
-                            tile = "优惠详情"
+                            webActForm = data?.content ?: "",
+                            tile = "优惠详情",
+                            Address =  data?.address ?: ""
                         )
+//                        val intent =Intent(requireActivity(),WebPicAct::class.java)
+//                          intent.putExtra("UrlWeb",data?.content ?: "")
+//                        intent.putExtra("UrlAddress",data?.address ?: "")
+//                        startActivity(intent)
                     }
                 }
-            }else{
-                when(data?.specialId){
-                    1 -> holder.findViewById<AppCompatImageView>(R.id.imgDiscount).setImageResource(R.mipmap.banner_1)
-                    2 -> holder.findViewById<AppCompatImageView>(R.id.imgDiscount).setImageResource(R.mipmap.banner_2)
-                    3 -> holder.findViewById<AppCompatImageView>(R.id.imgDiscount).setImageResource(R.mipmap.banner_3)
-                    4 -> holder.findViewById<AppCompatImageView>(R.id.imgDiscount).setImageResource(R.mipmap.banner_4)
-                }
-                holder.findViewById<AppCompatImageView>(R.id.imgType).setImageResource(R.mipmap.banner_type_ic)
-                holder.text(R.id.tvType, "体育优惠")
-                holder.textColorId(R.id.tvType, R.color.white)
-            }
         }
     }
 

@@ -50,7 +50,8 @@ interface ApiRouter {
         @ParameterAnno("webActForm") webActForm: String = "",
         @ParameterAnno("isString") isString: Boolean = false,
         @ParameterAnno("tile") tile: String = "",
-        @ParameterAnno("isOpenResize") isOpenResize: Boolean = true
+        @ParameterAnno("isOpenResize") isOpenResize: Boolean = true,
+        @ParameterAnno("webActAddress") Address: String = ""
     )
 
 

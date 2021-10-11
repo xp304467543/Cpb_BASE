@@ -3,7 +3,10 @@
 
     <application >
 
-        <activity android:name="com.discountall.discount.BannerInfo" android:theme="@style/SwipeBackStyle" />
-
+        <activity android:name="com.discountall.discount.WebPicAct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
     </application>
 </manifest>
